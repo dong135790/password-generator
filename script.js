@@ -2,7 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // YOUR CODE HERE
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  var result = prompt("What is your name?");
+  var random = Math.floor(Math.random() * lowercase.length);
+  console.log("RANDOM", random, lowercase[random]);
+
+  return "";
 }
 
 // Write password to the #password input
