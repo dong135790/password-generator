@@ -6,6 +6,7 @@ function generatePassword() {
   // 2. Use returnValue, which contains all the items that we want to randomize, and randomize them based on the length prompted.
   // 3. Return new value as trueReturnValue.
   var returnValue = "";
+  password = "Password:  ";
     // Dictionary or object in js 
   var generatedList = [
     {lowercase: "abcdefghijklmnopqrstuvwxyz"},
@@ -23,7 +24,7 @@ function generatePassword() {
   } else {
     // Ask for lowercase letters
     var askLower = prompt("Would you like to include lowercase letters?");
-    if (askLower.toUpperCase() == "YES") {
+    if (askLower.toUpperCase() == "YES" || askLower.toUpperCase() == "Y") {
       returnValue += generatedList[0].lowercase;
       console.log(returnValue);
       // var randomLower = Math.floor(Math.random() * generatedList[0].lowercase.length);
@@ -32,7 +33,7 @@ function generatePassword() {
     };
     // Ask for uppercase letters
     var askUpper = prompt("Would you like to include uppercase letters?");
-    if (askUpper.toUpperCase() == "YES"){
+    if (askUpper.toUpperCase() == "YES" || askUpper.toUpperCase() == "Y"){
       returnValue += generatedList[1].uppercase;
       console.log(returnValue);
       // var randomUpper = Math.floor(Math.random() * generatedList[1].uppercase.length);
@@ -40,7 +41,7 @@ function generatePassword() {
     }; 
     // Ask for Numbers
     var askNumeric = prompt("Would you like to include numbers?");
-    if (askNumeric.toUpperCase() == "YES"){
+    if (askNumeric.toUpperCase() == "YES" || askNumeric.toUpperCase() == "Y"){
       returnValue += generatedList[2].numeric;
       console.log(returnValue);
       // var randomNumeric = Math.floor(Math.random() * generatedList[2].numeric.length);
@@ -48,7 +49,7 @@ function generatePassword() {
     }; 
     //Ask for special
     var askSpecial = prompt("Would you like to include special characters?");
-    if (askSpecial.toUpperCase() == "YES"){
+    if (askSpecial.toUpperCase() == "YES" || askSpecial.toUpperCase() == "Y"){
       returnValue += generatedList[3].specialCharacter;
       console.log(returnValue);
       // var randomSpecial = Math.floor(Math.random() * generatedList[3].specialCharacter.length);
