@@ -3,6 +3,11 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // Dictionary or object in js
+  // Gameplan: 
+  // 1. Whichever generatedList[i] is included (based on prompts), add those values into an empty string (returnValue).
+  // 2. Use returnValue, which contains all the items that we want to randomize, and randomize them based on the length prompted.
+  // 3. Return new value as trueReturnValue.
+  var returnValue = "";
   var generatedList = [
     {lowercase: "abcdefghijklmnopqrstuvwxyz"},
     {uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"},
@@ -20,36 +25,44 @@ function generatePassword() {
     // Ask for lowercase letters
     var askLower = prompt("Would you like to include lowercase letters?");
     if (askLower.toUpperCase() == "YES") {
-      var randomLower = Math.floor(Math.random() * generatedList[0].lowercase.length);
-      // bugchecks
-      console.log("random", randomLower, generatedList[0].lowercase[randomLower]);
+      returnValue += generatedList[0].lowercase;
+      console.log(returnValue);
+      // var randomLower = Math.floor(Math.random() * generatedList[0].lowercase.length);
+      // // bugchecks
+      // console.log("random", randomLower, generatedList[0].lowercase[randomLower]);
     };
     // Ask for uppercase letters
     var askUpper = prompt("Would you like to include uppercase letters?");
     if (askUpper.toUpperCase() == "YES"){
-      var randomUpper = Math.floor(Math.random() * generatedList[1].uppercase.length);
-      console.log("random", randomUpper, generatedList[1].uppercase[randomUpper]);
-      // TODO
+      returnValue += generatedList[1].uppercase;
+      console.log(returnValue);
+      // var randomUpper = Math.floor(Math.random() * generatedList[1].uppercase.length);
+      // console.log("random", randomUpper, generatedList[1].uppercase[randomUpper]);
     }; 
     // Ask for Numbers
     var askNumeric = prompt("Would you like to include numbers?");
     if (askNumeric.toUpperCase() == "YES"){
-      var randomNumeric = Math.floor(Math.random() * generatedList[2].numeric.length);
-      console.log("random", randomNumeric, generatedList[2].numeric[randomNumeric]);
-      // TODO
+      returnValue += generatedList[2].numeric;
+      console.log(returnValue);
+      // var randomNumeric = Math.floor(Math.random() * generatedList[2].numeric.length);
+      // console.log("random", randomNumeric, generatedList[2].numeric[randomNumeric]);
     }; 
     //Ask for special
     var askSpecial = prompt("Would you like to include special characters?");
     if (askSpecial.toUpperCase() == "YES"){
-      var randomSpecial = Math.floor(Math.random() * generatedList[3].specialCharacter.length);
-      console.log("random", randomSpecial, generatedList[3].specialCharacter[randomSpecial]);
-      // TODO
+      returnValue += generatedList[3].specialCharacter;
+      console.log(returnValue);
+      // var randomSpecial = Math.floor(Math.random() * generatedList[3].specialCharacter.length);
+      // console.log("random", randomSpecial, generatedList[3].specialCharacter[randomSpecial]);
     };
+    trueReturnValue = "";
+    for (var i = 0; i < result; i++){
+      password += returnValue[Math.floor(Math.random() * returnValue.length)];
+      console.log(password);
+    };
+    return password;
     // Generate password based on input prompt
   };
-//   // var random = Math.floor(Math.random() * generatedList.length);
-//   // console.log("RANDOM", random, generatedList[random]);
-  return "";
 }
 
 // Write password to the #password input
