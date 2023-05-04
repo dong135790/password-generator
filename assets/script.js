@@ -55,8 +55,10 @@ function generatePassword() {
       // var randomSpecial = Math.floor(Math.random() * generatedList[3].specialCharacter.length);
       // console.log("random", randomSpecial, generatedList[3].specialCharacter[randomSpecial]);
     };
+    // Need new variable to randomize returnValue based on length of prompt (result)
     trueReturnValue = "";
     for (var i = 0; i < result; i++){
+      // returnValue[] instead of () since we are accessing index numbers, we just redoing it result no. of times
       password += returnValue[Math.floor(Math.random() * returnValue.length)];
       console.log(password);
     };
