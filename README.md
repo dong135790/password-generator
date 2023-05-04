@@ -23,7 +23,6 @@ Provides a semi-automatic process of generating a password of certain characters
 
 Implementation of javascript to link other webs via POST or GET.
 Add more flair via html/css to be more visually appealing.
-Replace the "[object HTMLTextAreaElement]" with "[ password ]"
 
 ## Contributing
 
