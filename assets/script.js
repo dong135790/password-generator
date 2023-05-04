@@ -2,12 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // Dictionary or object in js
-  // Gameplan: 
   // 1. Whichever generatedList[i] is included (based on prompts), add those values into an empty string (returnValue).
   // 2. Use returnValue, which contains all the items that we want to randomize, and randomize them based on the length prompted.
   // 3. Return new value as trueReturnValue.
   var returnValue = "";
+    // Dictionary or object in js 
   var generatedList = [
     {lowercase: "abcdefghijklmnopqrstuvwxyz"},
     {uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"},
