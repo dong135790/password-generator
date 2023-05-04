@@ -44,12 +44,11 @@ function generatePassword() {
       var randomSpecial = Math.floor(Math.random() * generatedList[3].specialCharacter.length);
       console.log("random", randomSpecial, generatedList[3].specialCharacter[randomSpecial]);
       // TODO
-    };       
+    };
+    // Generate password based on input prompt
   };
-
 //   // var random = Math.floor(Math.random() * generatedList.length);
 //   // console.log("RANDOM", random, generatedList[random]);
-
   return "";
 }
 
